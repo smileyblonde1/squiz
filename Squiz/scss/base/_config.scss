@@ -1,0 +1,108 @@
+//@copyright Lea Phillips 15/11/2019
+/* =======================================================================================================================================================================
+   Config
+   ===================================================================================================================================================================== */
+
+/* ====================================[ Base Colours]====================================*/
+
+$lightGrey:#D6D6D6;
+$midGrey:#8F9CA1;
+$darkGrey:#707070;
+$blue:#003A62;
+$darkerBlue:#003A60;
+$teal:#4E778C;
+$red:#E21A23;
+$action:#C3002F;
+$white: #FFF;
+
+/* ====================================[ Base Fonts ]====================================*/
+ 
+//fonts
+$nunito: 'Nunito',sans-serif; //Proxima
+$roboto: 'Roboto',sans-serif; // Helvetica Neue
+$incon: 'Inconsolata', monospace; //Consolas
+
+/* ====================================[ Mixins ]====================================*/
+
+//font sizes
+@mixin font16{
+font-size: 16px;
+}
+
+@mixin font17{
+font-size: 17px;
+}
+
+@mixin font18{
+font-size: 18px;
+}
+    
+@mixin font22{ 
+font-size: 22px;
+} 
+
+@mixin font42{
+font-size: 42px;
+}
+
+@mixin font130{
+font-size: 130px;
+}
+
+@mixin font170{
+font-size: 170px;        
+}
+
+@mixin font200{
+font-size: 200px;
+}
+    
+      
+
+// images
+@mixin arrowwhite{
+background-image:url(../images/arrow3.svg);
+background-repeat:no-repeat;
+}
+
+@mixin arrowblue{
+background-image:url(../images/arrow2.svg);
+background-repeat:no-repeat;
+}
+
+
+//standard styles
+@mixin dropShadow ($r:(0px 3px 10px 0 transparentize($darkGrey,0.74))){
+-webkit-box-shadow: $r;
+-moz-box-shadow: $r;
+box-shadow: $r;
+}
+
+@mixin stripesBck{
+ background-image: linear-gradient(121deg, #f4f5f5 12.50%, #ffffff 12.50%, #ffffff 50%, #f4f5f5 50%, #f4f5f5 62.50%, #ffffff 62.50%, #ffffff 100%);
+background-size: 9.33px 15.53px;
+}
+
+//Button mixins
+@mixin actionBtn {
+display: flex;
+align-items: center;
+justify-content:center;
+height:50px;
+margin: 0 20px 0 0;
+padding:0;
+background:$action;
+min-width:254px;
+@include font18;
+font-weight:bold;
+cursor:pointer; 
+line-height:24px;
+}
+
+
+//transitions 
+@mixin transition{ transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;
+}
+
+@mixin transform { transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05);
+}

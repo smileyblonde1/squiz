@@ -1,0 +1,120 @@
+
+//@copyright Lea Phillips 15/11/2019
+/* ======================================================================================================================
+   Imports
+   ====================================================================================================================== */
+
+@import 'config';
+
+/* ======================================================================================================================
+   Index Defaults
+   ====================================================================================================================== */
+
+body {
+	margin: 0;
+	font-family: $nunito;
+	color: $darkerBlue;
+	@include font16;
+	background:$white;
+}
+html {
+	overflow-x: hidden;
+}
+h1 {
+font-family:$nunito;
+@include font22;
+color: $white;
+text-transform: uppercase;
+}
+
+h2 {
+	font-family:$nunito;
+	@include font22;
+	color: $darkerBlue;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0 0 10px 0;
+}
+h3 { 
+	font-family:$nunito;
+	@include font18;
+	color: $white;
+}
+
+h4 {
+	font-family:$nunito;
+	@include font18;
+	color: $darkerBlue;
+	font-weight: bold;
+	line-height:24px;
+	margin:0;
+}
+
+p {
+	@include font16;
+	color: $darkerBlue;
+	line-height:22px
+}
+a {
+	color: $darkerBlue;
+} 
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+.wrapper {
+  max-width: 1120px; 
+  margin:0 auto;
+	padding:0 20px;
+	min-height: 100vh; 
+} 
+
+section#home .wrapper {
+  padding:0 10px;
+}
+
+input,
+input:active, 
+input:focus,
+input:focus-within,
+input:hover, 
+input:visited {
+  font-size: 16px !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------Scroll bars-----------*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 7px;
+  border-radius: 10px; 
+  border: 2px solid transparentize($darkerBlue,0.84);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparentize($darkerBlue,0.64);
+  border-radius: 10px;
+  border: 2px solid transparentize($darkerBlue,0.84);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparentize($darkerBlue,0.84);
+}
+

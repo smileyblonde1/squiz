@@ -1,0 +1,555 @@
+//@copyright Lea Phillips 15/11/2019
+/* ======================================================================================================================
+Imports
+====================================================================================================================== */
+
+@import 'config';
+
+/* ======================================================================================================================
+Index Template
+====================================================================================================================== */
+
+.container {
+	max-width: 1920px;
+	margin:0 auto;
+	min-height: 100vh; 
+	width: 100%;
+}
+//------------------------------Header Splash Section --------------------------------------------------
+.logoHolder {
+    display: flex;
+    align-items: flex-end;
+    height: 115px;
+    justify-content: flex-end;
+    padding-right: 52px;
+    .company {
+        @include font42;
+        font-family: $nunito;
+        color: $blue;
+        font-weight: bold;
+    }
+    .logo {
+        @include font42;
+        color: $red;
+        font-family: $incon;
+    }
+}
+.linksHolder {
+    margin: 0 auto;
+    border-top: 1px $darkerBlue solid;
+    border-bottom: 1px $darkerBlue solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    .menuItems {
+        height: 66px;
+        display: flex;
+        width: 100%;
+        max-width: 1106px;
+        padding: 0;
+        margin: 0;
+        li {
+            flex: auto;
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: space-around;
+            @include font18;
+            color: $darkerBlue;
+            font-weight: bold;
+        }
+        .red a {
+            color: $red;
+        }
+    }
+}
+.splashHolder {
+    height: 482px;
+    width: 100%;
+    max-width: 1920px;
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/splash.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+//------------------------------Search Holder Section --------------------------------------------------
+.searchHolder {
+    position: relative;
+    top: 70%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    .blueBox {
+        width: 100%;
+        max-width: 1106px;
+        height: 81px;
+        background-color: $blue;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        height: 50%;
+    }
+    .searchArea {
+        background-color: $white;
+        width: 100%;
+        max-width: 1106px;
+        height: 103px;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        @include dropShadow;
+        .text {
+            @include font18;
+            font-family: $nunito;
+            font-weight: bold;
+            color: $blue;
+        }
+    }
+}
+
+//------------------------------Featured Section --------------------------------------------------
+.featureWrapper {
+    min-height: 600px;
+    max-height: 1031px; 
+    @include stripesBck;
+    display: flex;
+    justify-content: center; 
+    .featureArea {
+        max-width: 1106px;
+		.headerBox{
+			min-height: 70px;  
+			background-color: $blue;
+			padding: 0 30px; 
+			display: flex;
+       		align-items: center;
+			h4{
+				color:white;
+				text-transform: uppercase;
+
+			}
+		} 
+		.infoBox {
+			padding: 25px 30px 30px;
+		}
+		.newsTitle{
+			@include font16;
+			color:$red;
+			padding:20px 0;
+			text-transform: uppercase;
+
+		}
+		.newsDate{
+			@include font16;
+			color: $darkerBlue;
+			padding:30px 0 0;
+		}
+    }
+    .featuredText {
+        opacity: 0.1;
+        font-weight: bold;
+        font-size: 200px;
+        font-family: $nunito;
+        color: $teal;
+        text-align: right;
+    }
+    .featuredImg {
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+        bottom: 92px;
+        position: relative;
+    }
+    .featuredBox {
+        position: relative;
+        justify-content: flex-start;
+        top: -630px;
+        z-index: 2;
+        display: flex;
+    }
+    .featureContainer {
+        width: 540px;
+        min-height: 430px;
+        background: $white;
+		@include dropShadow
+    }
+}
+
+//------------------------------------------What we do ----------------------------------------------------------------
+.whatwedoWrapper {
+    min-height: 325px;
+    background-color: $white;
+    border-top: 1px $midGrey solid;
+    border-bottom: 1px $midGrey solid;
+    .textArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .infoBox {
+        background: $white 0% 0% no-repeat padding-box;
+        @include dropShadow;
+        border: 1px solid $darkerBlue;
+        border-bottom: 10px solid $darkerBlue;
+        min-height: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        &.active {
+            background: $darkerBlue;
+            color: $white;
+            h4 {
+                color: $white;
+            }
+        }
+        &:hover {
+            background: $darkerBlue;
+            color: $white;
+            cursor: pointer;
+            h4 {
+                color: $white;
+            }
+        }
+    }
+    .arrow {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+    }
+    i.fas.fa-arrow-right {
+        font-size: 20px;
+    }
+}
+
+//------------------------------Related Sites Section --------------------------------------------------
+.relatedSitesWrapper {
+    min-height: 500px;
+    @include stripesBck;
+    border-top: 1px $midGrey solid;
+    border-bottom: 1px $midGrey solid;
+    padding: 20px 0;
+    .textArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .infoBox {
+        background: $white 0% 0% no-repeat padding-box;
+        @include dropShadow;
+        border: 1px solid $darkerBlue;
+        border-bottom: 10px solid $darkerBlue;
+        min-height: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        &.active {
+            background: $darkerBlue;
+            color: $white;
+            h4 {
+                color: $white;
+            }
+        }
+        &:hover {
+            background: $darkerBlue;
+            color: $white;
+            cursor: pointer;
+            h4 {
+                color: $white;
+            }
+        }
+    }
+    .arrow {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+    }
+    i.fas.fa-chevron-right {
+        font-size: 20px;
+    }
+}
+
+//------------------------------Case Study Section --------------------------------------------------
+.casestudyWrapper {
+    min-height: 1221px;
+    @include stripesBck;
+    padding: 20px;
+	 .featuredText {
+        opacity: 0.1;
+        font-weight: bold;
+        font-size: 200px; 
+        font-family: $nunito; 
+        color: $teal;
+		z-index:-1;
+		display: flex;
+		height: 150px;
+		justify-content: center;
+		align-items: center
+    }
+    .CSHolderTop {
+        display: flex; 
+        justify-content: center;
+        .headerBox {
+            width: 100%;
+            max-width: 1106px;
+            min-height: 70px;
+            background-color: $blue;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+			z-index:1;
+            margin-top: -15px;
+            h1 {
+                margin: 0;
+            }
+        }
+        .panelArea {
+            background-color: $white;
+            width: 100%;
+            max-width: 1106px;
+            padding:30px;
+            @include dropShadow;
+			z-index:1;
+            .panelTxt {
+                padding: 0 20px 0 0;
+                &:before {
+                 content: '';
+					position: absolute;
+					width: 35px;
+					height: 35px;
+					background: url("../images/noun_Quotation Marks_479904-1.png") no-repeat;
+				}
+            }
+
+            .quote {
+                font-family: $nunito;
+                @include font18;
+                color: $darkerBlue;
+                font-weight: bold;
+                line-height: 24px;
+                text-align: center;
+                padding: 0 40px 30px;
+															 &:after {
+                    content: '';
+                    position: absolute;
+					width: 35px;
+					height: 35px;
+                    background: url("../images/noun_Quotation Marks_479904.png")no-repeat;
+				
+                }
+
+            }
+            .quoteName {
+                font-family: $nunito;
+                @include font16;
+                color: $darkerBlue;
+                line-height: 24px;
+                text-align: center;
+            }
+            .blurb {
+                margin: 20px 0;
+            }
+            .button {
+                @include actionBtn;
+            }
+        }
+    }
+    .CSHolderBottom {
+        display: flex;
+        justify-content: center;
+		margin:30px 0 0;
+        .panelArea {
+            background-color: $white;
+            width: 100%;
+            max-width: 1106px;
+			min-height:393px; 
+            padding: 30px;
+            @include dropShadow;
+        }
+		.caseStudyBoxes{
+			min-height:285px
+		}
+		p {
+			font-weight:bold
+		}
+    }
+}
+//------------------------------ News and Events Section --------------------------------------------------
+.newsEventsWrapper {
+    background: $white;
+    padding: 0 98px 70px;
+    border-top: 1px $darkGrey solid;
+    .featuredText {
+        opacity: 0.1;
+        font-weight: bold;
+        font-size: 130px;
+        font-family: $nunito;
+        color: $blue;
+        height: 0;
+    }
+	.dateHolder {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1px;
+			.dateBlock {
+			background: $darkerBlue;
+			color: $white;
+			width: 87px;
+			height: 70px;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			line-height: 24px;
+			text-align: center;
+			@include font18;
+			position: absolute;
+		}
+	}
+    .button {
+        @include actionBtn;
+    }
+    .duoPanel {
+        z-index: 1;
+        margin: 140px 0 0;
+    }
+    .newsBloc, .eventsBloc {
+        background: $white;
+        @include dropShadow;
+        .headerBox {
+            height: 70px;
+            background-color: $blue;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            h4 {
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+        .infoBox {
+            padding: 25px 30px 30px;
+        }
+        .newsTitle {
+            @include font16;
+            color: $red;
+            padding: 20px 0;
+            text-transform: uppercase;
+        }
+        .calenderInfo {
+            @include font16;
+            color: $darkerBlue;
+            font-weight: bold;
+        }
+    }
+    .featureTxt {
+        background: white;
+        @include font16;
+        font-weight: bold;
+        padding: 20px;
+        @include dropShadow;
+        .newsTitle {
+            color: $red;
+            text-transform: uppercase;
+        }
+    }
+    .blockInfo {
+        min-width: 255px;
+        margin: 30px 15px;
+        max-width: 255px;
+        padding: 0;
+        &:first-child {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+        }
+        &:hover	{
+            cursor:pointer;
+            @include transition;
+            @include transform;
+        }
+    }
+} 
+
+//------------------------------Subscribe Section --------------------------------------------------
+.subscribeWrapper {   
+	min-height:350px;
+	background: $white;
+		.boxedArea {
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+				.panelArea{
+					background-color: $white; 
+					width: 100%;
+					max-width: 882px;
+					padding: 0 50px;;
+					min-height:120px;
+					@include dropShadow;
+					 align-items: center;
+			}
+			.panelText {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			
+			.button {
+				@include actionBtn;
+			}
+		}
+}
+
+
+//------------------------------ Footer Section --------------------------------------------------
+footer {
+    color: $white;
+    background-color: $darkerBlue;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 3em 0 0;
+}
+ul {
+    &.footerLinks {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: center;
+        width: 70%;
+        margin: 1em auto;
+        padding: 0 10px;
+    }
+    &.innerFooterList {
+        padding: 0;
+        margin: 0;
+        li {
+            flex-wrap: wrap;
+        }
+    }
+}
+.footerLinks {
+    li {
+        flex: 1;
+        list-style-type: none;
+        padding: 0 1px;
+        a {
+            color: $lightGrey;
+            @include font16;
+            text-decoration: none;
+            padding: 0;
+            line-height: 32px;
+        }
+    }
+}
+h2.footerHeader {
+    font-family: inherit;
+    font-size: 100%;
+    color: $white;
+    font-weight: normal;
+}
+
